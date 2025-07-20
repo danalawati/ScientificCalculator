@@ -11,7 +11,8 @@ public class ScientificCalculator {
         //performSquareRoot(scanner);
         //performPower(scanner);
         //performSine(scanner);
-        performCosine(scanner);
+        //performCosine(scanner);
+        performTangent(scanner);
     }
     public static void performAddition(Scanner scanner) {
         System.out.print("Enter the first number: ");
@@ -102,6 +103,22 @@ public class ScientificCalculator {
         double result = Math.cos(radians);
 
         System.out.println("Cosine of " + degrees + " degrees is: " + result);
+    }
+
+    public static void performTangent(Scanner scanner) {
+        System.out.print("Enter the angle in degrees: ");
+        double degrees = scanner.nextDouble();
+
+        double mod = degrees % 180;
+        if (Math.abs(mod - 90) < 1e-10) { //  floating point error
+            System.out.println("Error: Tangent is undefined at " + degrees + " degrees.");
+            return;
+        }
+
+        double radians = Math.toRadians(degrees);
+        double result = Math.tan(radians);
+
+        System.out.println("Tangent of " + degrees + " degrees is: " + result);
     }
 
     public static void displayMenu() {
