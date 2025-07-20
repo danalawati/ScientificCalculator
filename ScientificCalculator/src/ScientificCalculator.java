@@ -19,9 +19,56 @@ public class ScientificCalculator {
         //performRounding(scanner);
         //performCeiling(scanner);
         //performFloor(scanner);
-        performMinimum(scanner);
-        performMaximum(scanner);
+        //performMinimum(scanner);
+        //performMaximum(scanner);
+        performOperation(scanner);
     }
+
+    private static void performOperation(Scanner scanner) {
+        boolean running = true;
+
+        while (running) {
+            displayMenu();
+
+            System.out.print("Enter your choice: ");
+            String input = scanner.nextLine();
+
+            int choice;
+            try {
+                choice = Integer.parseInt(input);
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a number.");
+                continue; // or return; or break; depending on your loop
+            }
+
+
+            switch (choice) {
+                case 1 -> performAddition(scanner);
+                case 2 -> performSubtraction(scanner);
+                case 3 -> performMultiplication(scanner);
+                case 4 -> performDivision(scanner);
+                case 5 -> performSquareRoot(scanner);
+                case 6 -> performPower(scanner);
+                case 7 -> performSine(scanner);
+                case 8 -> performCosine(scanner);
+                case 9 -> performTangent(scanner);
+                case 10 -> performNaturalLogarithm(scanner);
+                case 11 -> performLogarithmBase10(scanner);
+                case 12 -> calculateAbsoluteValue(scanner);
+                case 13 -> performRounding(scanner);
+                case 14 -> performCeiling(scanner);
+                case 15 -> performFloor(scanner);
+                case 16 -> performMinimum(scanner);
+                case 17 -> performMaximum(scanner);
+                case 0 -> {
+                    System.out.println("Exiting calculator. Goodbye!");
+                    running = false;
+                }
+                default -> System.out.println("Invalid choice. Please try again.");
+            }
+        }
+    }
+
     public static void performAddition(Scanner scanner) {
         System.out.print("Enter the first number: ");
         double num1 = scanner.nextDouble();
@@ -210,8 +257,30 @@ public class ScientificCalculator {
 
 
 
-    public static void displayMenu() {
 
+    public static void displayMenu() {
+        System.out.println("\n=== Scientific Calculator ===");
+        System.out.println("1. Addition");
+        System.out.println("2. Subtraction");
+        System.out.println("3. Multiplication");
+        System.out.println("4. Division");
+        System.out.println("5. Square Root");
+        System.out.println("6. Power");
+        System.out.println("7. Sine");
+        System.out.println("8. Cosine");
+        System.out.println("9. Tangent");
+        System.out.println("10. Natural Logarithm (ln)");
+        System.out.println("11. Base-10 Logarithm (log10)");
+        System.out.println("12. Absolute Value");
+        System.out.println("13. Round");
+        System.out.println("14. Ceiling");
+        System.out.println("15. Floor");
+        System.out.println("16. Minimum");
+        System.out.println("17. Maximum");
+        System.out.println("0. Exit");
+        System.out.print("Select an option: ");
     }
+
+
 
 }
