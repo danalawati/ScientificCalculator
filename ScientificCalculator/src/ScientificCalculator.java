@@ -10,7 +10,8 @@ public class ScientificCalculator {
         //performDivision(scanner);
         //performSquareRoot(scanner);
         //performPower(scanner);
-        performSine(scanner);
+        //performSine(scanner);
+        performCosine(scanner);
     }
     public static void performAddition(Scanner scanner) {
         System.out.print("Enter the first number: ");
@@ -91,6 +92,16 @@ public class ScientificCalculator {
         double result = Math.sin(radians);
 
         System.out.println("Sine of " + degrees + " degrees is: " + result);
+    }
+
+    public static void performCosine(Scanner scanner) {
+        System.out.print("Enter the angle in degrees: ");
+        double degrees = scanner.nextDouble();
+
+        double radians = Math.toRadians(degrees);
+        double result = Math.cos(radians);
+
+        System.out.println("Cosine of " + degrees + " degrees is: " + result);
     }
 
     public static void displayMenu() {
