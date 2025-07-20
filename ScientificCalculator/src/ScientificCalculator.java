@@ -7,7 +7,8 @@ public class ScientificCalculator {
         // performAddition(scanner);
         //performSubtraction(scanner);
         //performMultiplication(scanner);
-        performDivision(scanner);
+        //performDivision(scanner);
+        performSquareRoot(scanner);
     }
     public static void performAddition(Scanner scanner) {
         System.out.print("Enter the first number: ");
@@ -55,6 +56,20 @@ public class ScientificCalculator {
         double result = numerator / denominator;
         System.out.println("Result: " + result);
     }
+
+    public static void performSquareRoot(Scanner scanner) {
+        System.out.print("Enter a number to find the square root: ");
+        double num = scanner.nextDouble();
+
+        if (num < 0) {
+            System.out.println("Error: Cannot calculate the square root of a negative number.");
+            return;
+        }
+
+        double result = Math.sqrt(num);
+        System.out.println("Square root: " + result);
+    }
+
     public static void displayMenu() {
 
     }
