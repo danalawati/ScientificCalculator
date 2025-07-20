@@ -8,7 +8,8 @@ public class ScientificCalculator {
         //performSubtraction(scanner);
         //performMultiplication(scanner);
         //performDivision(scanner);
-        performSquareRoot(scanner);
+        //performSquareRoot(scanner);
+        performPower(scanner);
     }
     public static void performAddition(Scanner scanner) {
         System.out.print("Enter the first number: ");
@@ -68,6 +69,17 @@ public class ScientificCalculator {
 
         double result = Math.sqrt(num);
         System.out.println("Square root: " + result);
+    }
+
+    public static void performPower(Scanner scanner) {
+        System.out.print("Enter the base number: ");
+        double base = scanner.nextDouble();
+
+        System.out.print("Enter the exponent: ");
+        double exponent = scanner.nextDouble();
+
+        double result = Math.pow(base, exponent);
+        System.out.println(base + " raised to the power of " + exponent + " is: " + result);
     }
 
     public static void displayMenu() {
