@@ -14,7 +14,8 @@ public class ScientificCalculator {
         //performCosine(scanner);
         //performTangent(scanner);
         //performNaturalLogarithm(scanner);
-        performLogarithmBase10(scanner);
+        //performLogarithmBase10(scanner);
+        calculateAbsoluteValue(scanner);
     }
     public static void performAddition(Scanner scanner) {
         System.out.print("Enter the first number: ");
@@ -147,6 +148,14 @@ public class ScientificCalculator {
 
         double result = Math.log10(num);
         System.out.println("Base 10 logarithm of " + num + " is: " + result);
+    }
+
+    public static void calculateAbsoluteValue(Scanner scanner) {
+        System.out.print("Enter a number to calculate its absolute value: ");
+        double num = scanner.nextDouble();
+
+        double result = Math.abs(num);
+        System.out.println("Absolute value of " + num + " is: " + result);
     }
 
     public static void displayMenu() {
