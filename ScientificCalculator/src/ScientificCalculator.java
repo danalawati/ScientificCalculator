@@ -15,7 +15,10 @@ public class ScientificCalculator {
         //performTangent(scanner);
         //performNaturalLogarithm(scanner);
         //performLogarithmBase10(scanner);
-        calculateAbsoluteValue(scanner);
+        //calculateAbsoluteValue(scanner);
+        performRounding(scanner);
+        performCeiling(scanner);
+        performFloor(scanner);
     }
     public static void performAddition(Scanner scanner) {
         System.out.print("Enter the first number: ");
@@ -156,6 +159,30 @@ public class ScientificCalculator {
 
         double result = Math.abs(num);
         System.out.println("Absolute value of " + num + " is: " + result);
+    }
+
+    public static void performRounding(Scanner scanner) {
+        System.out.print("Enter a number to round: ");
+        double num = scanner.nextDouble();
+
+        long result = Math.round(num);
+        System.out.println("Rounded value of " + num + " is: " + result);
+    }
+
+    public static void performCeiling(Scanner scanner) {
+        System.out.print("Enter a number to apply ceiling: ");
+        double num = scanner.nextDouble();
+
+        double result = Math.ceil(num);
+        System.out.println("Ceiling value of " + num + " is: " + result);
+    }
+
+    public static void performFloor(Scanner scanner) {
+        System.out.print("Enter a number to apply floor: ");
+        double num = scanner.nextDouble();
+
+        double result = Math.floor(num);
+        System.out.println("Floor value of " + num + " is: " + result);
     }
 
     public static void displayMenu() {
