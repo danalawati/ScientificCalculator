@@ -16,9 +16,11 @@ public class ScientificCalculator {
         //performNaturalLogarithm(scanner);
         //performLogarithmBase10(scanner);
         //calculateAbsoluteValue(scanner);
-        performRounding(scanner);
-        performCeiling(scanner);
-        performFloor(scanner);
+        //performRounding(scanner);
+        //performCeiling(scanner);
+        //performFloor(scanner);
+        performMinimum(scanner);
+        performMaximum(scanner);
     }
     public static void performAddition(Scanner scanner) {
         System.out.print("Enter the first number: ");
@@ -184,6 +186,29 @@ public class ScientificCalculator {
         double result = Math.floor(num);
         System.out.println("Floor value of " + num + " is: " + result);
     }
+
+    public static void performMinimum(Scanner scanner) {
+        System.out.print("Enter the first number: ");
+        double num1 = scanner.nextDouble();
+
+        System.out.print("Enter the second number: ");
+        double num2 = scanner.nextDouble();
+
+        double result = Math.min(num1, num2);
+        System.out.println("The minimum value is: " + result);
+    }
+    public static void performMaximum(Scanner scanner) {
+        System.out.print("Enter the first number: ");
+        double num1 = scanner.nextDouble();
+
+        System.out.print("Enter the second number: ");
+        double num2 = scanner.nextDouble();
+
+        double result = Math.max(num1, num2);
+        System.out.println("The maximum value is: " + result);
+    }
+
+
 
     public static void displayMenu() {
 
