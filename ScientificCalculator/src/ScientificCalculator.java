@@ -12,7 +12,8 @@ public class ScientificCalculator {
         //performPower(scanner);
         //performSine(scanner);
         //performCosine(scanner);
-        performTangent(scanner);
+        //performTangent(scanner);
+        performNaturalLogarithm(scanner);
     }
     public static void performAddition(Scanner scanner) {
         System.out.print("Enter the first number: ");
@@ -119,6 +120,19 @@ public class ScientificCalculator {
         double result = Math.tan(radians);
 
         System.out.println("Tangent of " + degrees + " degrees is: " + result);
+    }
+
+    public static void performNaturalLogarithm(Scanner scanner) {
+        System.out.print("Enter a positive number to calculate its natural logarithm (ln): ");
+        double num = scanner.nextDouble();
+
+        if (num <= 0) {
+            System.out.println("Error: Natural logarithm is undefined for zero or negative numbers.");
+            return;
+        }
+
+        double result = Math.log(num);
+        System.out.println("Natural logarithm (ln) of " + num + " is: " + result);
     }
 
     public static void displayMenu() {
