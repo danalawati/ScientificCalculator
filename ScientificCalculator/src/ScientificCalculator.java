@@ -13,7 +13,8 @@ public class ScientificCalculator {
         //performSine(scanner);
         //performCosine(scanner);
         //performTangent(scanner);
-        performNaturalLogarithm(scanner);
+        //performNaturalLogarithm(scanner);
+        performLogarithmBase10(scanner);
     }
     public static void performAddition(Scanner scanner) {
         System.out.print("Enter the first number: ");
@@ -133,6 +134,19 @@ public class ScientificCalculator {
 
         double result = Math.log(num);
         System.out.println("Natural logarithm (ln) of " + num + " is: " + result);
+    }
+
+    public static void performLogarithmBase10(Scanner scanner) {
+        System.out.print("Enter a positive number to calculate its base 10 logarithm: ");
+        double num = scanner.nextDouble();
+
+        if (num <= 0) {
+            System.out.println("Error: Logarithm base 10 is undefined for zero or negative numbers.");
+            return;
+        }
+
+        double result = Math.log10(num);
+        System.out.println("Base 10 logarithm of " + num + " is: " + result);
     }
 
     public static void displayMenu() {
